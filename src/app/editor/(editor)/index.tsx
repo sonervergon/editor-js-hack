@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 export const Editor = () => {
   const [showUi, setShowUi] = React.useState(false);
   return (
-    <div className="w-full h-full">
+    <div className="bg-transparent w-full h-full">
       <Button
         onClick={() => {
           setShowUi((prev) => !prev);
@@ -18,7 +18,7 @@ export const Editor = () => {
       >
         Edit background
       </Button>
-      <div className="bg-red-500 z-0 overflow-hidden relative page">
+      <div className="bg-transparent z-0 overflow-hidden relative page">
         <div className="absolute w-full h-full z-20" id="images">
           {/* <Image
           src={ImageContent.src}

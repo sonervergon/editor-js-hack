@@ -14,7 +14,7 @@ import "./custom-ui.css";
 export function TldrawEditorComponent({ showUi }: { showUi: boolean }) {
   return (
     <>
-      <div className=" h-full">
+      <div className="bg-transparent h-full">
         <Tldraw persistenceKey="canvas" hideUi>
           <ContextMenu>
             <Canvas />
@@ -29,7 +29,8 @@ export function TldrawEditorComponent({ showUi }: { showUi: boolean }) {
 const CustomUi = track(() => {
   const editor = useEditor();
   const d = useToolbarSchema();
-  const container = useContainer();
+  console.log(d);
+
   React.useEffect(() => {
     editor.canMoveCamera = false;
     editor.setCamera(0, 0, 1);

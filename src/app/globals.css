@@ -114,3 +114,7 @@
     font-size: 55px;
   }
 }
+
+.tl-background {
+  background-color: white !important;
+}
